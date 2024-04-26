@@ -6,22 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fix:lint": "next lint --fix",
+    "format": "prettier --write --ignore-path .prettierignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "supabase-gen": "pnpm supabase gen types typescript --linked > types/supabase.d.ts"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.1.0",
+    "@supabase/supabase-js": "^2.39.8",
+    "@types/common-tags": "^1.8.4",
+    "ai": "^3.0.16",
+    "common-tags": "^1.8.2",
+    "eventsource-parser": "^1.1.2",
+    "gpt3-tokenizer": "^1.1.5",
+    "next": "14.1.4",
+    "openai": "^4.29.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.4"
+    "supabase": "^1.150.0",
+    "typescript": "5.3"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.15.1",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "tailwindcss": "^3.3.0"
   }
 }
